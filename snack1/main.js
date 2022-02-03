@@ -25,12 +25,19 @@ const bici = [
     }
     
 ];
-    let pesoBici = [];
-for(let i = 0; i < bici.length; i++){
-    let peso = bici[i].peso;
 
-    pesoBici.push(peso);
+
+let biciLeggera = bici[0];
+for(let i = 0; i < bici.length; i++){
+    if(biciLeggera.peso > bici[i].peso){
+        biciLeggera = bici[i];
+    }
 }
 
-console.log(Math.min(...pesoBici))
+let {nome, peso} = biciLeggera;
 
+let nomeBici = document.getElementById('nome');
+let pesoBici = document.getElementById('peso');
+
+nomeBici.innerHTML = nome;
+pesoBici.innerHTML = peso;
