@@ -1,4 +1,4 @@
-const SerieA = [
+const serieA = [
     {
         'nome': 'Atalanta',
         'punti fatti':0,
@@ -124,3 +124,34 @@ const SerieA = [
 function numRandom (min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
+//aggiunta del numero di punti fatti
+
+for(i = 0; i < serieA.length; i++ ){
+
+    serieA[i]['punti fatti'] = numRandom(0, 114);
+}
+
+
+//aggiunta del numero di falli subiti
+
+for(i = 0; i < serieA.length; i++ ){
+
+    serieA[i]['falli subiti'] = numRandom(300, 600);
+}
+
+console.log(serieA)
+
+//creazione di un nuovo array contenente oggetti con le voci nome e falli subiti
+
+let serieAFalliSubiti = [];
+
+for(i = 0; i < serieA.length; i++ ){
+    let nome = serieA[i]['nome'];
+    let falliSubiti = serieA[i]['falli subiti'];
+    let items = {nome, falliSubiti};
+    serieAFalliSubiti.push(items);
+ 
+}
+console.log(serieAFalliSubiti);
