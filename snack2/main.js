@@ -1,3 +1,4 @@
+//array di object 
 const serieA = [
     {
         'nome': 'Atalanta',
@@ -120,7 +121,7 @@ const serieA = [
     }
 
 ]
-
+//funzione per la creazione di numeri randomici
 function numRandom (min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -141,17 +142,24 @@ for(i = 0; i < serieA.length; i++ ){
     serieA[i]['falli subiti'] = numRandom(300, 600);
 }
 
+
 console.log(serieA)
 
 //creazione di un nuovo array contenente oggetti con le voci nome e falli subiti
 
+//inizializzo un array vuoto
 let serieAFalliSubiti = [];
 
 for(i = 0; i < serieA.length; i++ ){
+    //recupero il dato nome
     let nome = serieA[i]['nome'];
+    //recupero il dato falli subiti
     let falliSubiti = serieA[i]['falli subiti'];
+    //unisco i dati in un object
     let items = {nome, falliSubiti};
+    //inserisco l'object all'interno di un array precedentemente inizializzato
     serieAFalliSubiti.push(items);
- 
 }
+
 console.log(serieAFalliSubiti);
+
