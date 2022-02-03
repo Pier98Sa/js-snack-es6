@@ -1,27 +1,36 @@
 const bici = [
     {
-        'nome' : Savadeck,
+        'nome' : 'Savadeck',
         'peso' : 8
     },
 
     {
-        'nome' : NAZGGYA ,
+        'nome' : 'NAZGGYA' ,
         'peso' : 7
     },
 
     {
-        'nome' : Canyon ,
+        'nome' : 'Canyon' ,
         'peso' : 6.5
     },
 
     {
-        'nome' : Rose,
+        'nome' : 'Rose',
         'peso' : 6.9
     },
 
     {
-        'nome' : Sarto,
+        'nome' : 'Sarto',
         'peso' : 5.7
     }
     
 ];
+    let pesoBici = [];
+for(let i = 0; i < bici.length; i++){
+    let peso = bici[i].peso;
+
+    pesoBici.push(peso);
+}
+
+console.log(Math.min(...pesoBici))
+
