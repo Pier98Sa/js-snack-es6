@@ -1,5 +1,9 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body{
+    background-color: #808080;
+    font-family: Arial, Helvetica, sans-serif;
 }
+/*classe per ridemsionare la foto all'interno della navbar dell'header*/
+.ms_logo-header{
+    width: 100px;
+}
+
