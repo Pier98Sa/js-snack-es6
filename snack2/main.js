@@ -2,122 +2,122 @@
 const serieA = [
     {
         'nome': 'Atalanta',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Bologna',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Cagliari',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Empoli',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Fiorentina',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Genoa',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Inter',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Juventus',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Lazio',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Milan',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Napoli',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Roma',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Salernitana',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Sampdoria',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Sassuolo',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Spezia',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Torino',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Udinese',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Venezia',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     },
 
     {
         'nome':'Verona',
-        'punti fatti':0,
-        'falli subiti':0,
+        'punti_fatti':0,
+        'falli_subiti':0,
     }
 
 ]
@@ -132,8 +132,8 @@ function numRandom (min, max){
 
 for(i = 0; i < serieA.length; i++ ){
 
-    serieA[i]['punti fatti'] = numRandom(0, 114);
-    serieA[i]['falli subiti'] = numRandom(300, 600);
+    serieA[i]['punti_fatti'] = numRandom(0, 114);
+    serieA[i]['falli_subiti'] = numRandom(300, 600);
 }
 
 console.log(serieA)
@@ -144,14 +144,10 @@ console.log(serieA)
 let serieAFalliSubiti = [];
 
 for(i = 0; i < serieA.length; i++ ){
-    //recupero il dato nome
-    let nome = serieA[i]['nome'];
-    //recupero il dato falli subiti
-    let falliSubiti = serieA[i]['falli subiti'];
-    //unisco i dati in un object
-    let items = {nome, falliSubiti};
+    //recupero il dato nome e falli subiti
+    const{nome, falli_subiti} = serieA[i];
     //inserisco l'object all'interno di un array precedentemente inizializzato
-    serieAFalliSubiti.push(items);
+    serieAFalliSubiti.push({nome, falli_subiti});
 }
 
 console.log(serieAFalliSubiti);
