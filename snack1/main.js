@@ -52,6 +52,6 @@ let pesoBici = document.getElementById('peso');
 let fotoBici = document.getElementById('photo')
 
 //inserisco i dati nell'html
-nomeBici.innerHTML = 'Modello: ' + nome;
-pesoBici.innerHTML = 'Peso: ' + peso + 'Kg';
+nomeBici.innerHTML = `Modello: ${nome}`;
+pesoBici.innerHTML = `Peso: ${peso}Kg`;
 fotoBici.innerHTML = `<img src="${foto}" class = 'w-100 img-fluid' alt = "bici">`;
