@@ -128,20 +128,13 @@ function numRandom (min, max){
 
 
 //aggiunta del numero di punti fatti
-
-for(i = 0; i < serieA.length; i++ ){
-
-    serieA[i]['punti fatti'] = numRandom(0, 114);
-}
-
-
 //aggiunta del numero di falli subiti
 
 for(i = 0; i < serieA.length; i++ ){
 
+    serieA[i]['punti fatti'] = numRandom(0, 114);
     serieA[i]['falli subiti'] = numRandom(300, 600);
 }
-
 
 console.log(serieA)
 
